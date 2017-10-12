@@ -1,7 +1,4 @@
 # Term Project: Chess Game
-## Prototype:
-![poster seenthatcar](https://github.com/RockSoda/chessgame/blob/master/Screenshots/03.tiff)
-
 ## Contributors:
  Xiaohan Yu
 
