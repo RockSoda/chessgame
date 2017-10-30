@@ -1,8 +1,10 @@
 package com.example.sigh.firstapp
 
+import android.content.Context
 import android.widget.ImageButton
+import android.widget.Toast
 
-class Pieces(var id1: Int, var id2: Int, var btn1: ImageButton, var btn2: ImageButton, var player: Int, var board: kotlin.Array<String>, var ldRookNeverMoved: Boolean, var rdRookNeverMoved: Boolean, var llRookNeverMoved: Boolean, var rlRookNeverMoved: Boolean, var dKingNeverMoved: Boolean, var lKingNeverMoved: Boolean){
+class Pieces(var id1: Int, var id2: Int, var btn1: ImageButton, var btn2: ImageButton, var player: Int, var board: Array<String>, var ldRookNeverMoved: Boolean, var rdRookNeverMoved: Boolean, var llRookNeverMoved: Boolean, var rlRookNeverMoved: Boolean, var dKingNeverMoved: Boolean, var lKingNeverMoved: Boolean, var activePlayer: Int){
     var checkValidity = false
     var id11 = -1
     var id12 = -1
@@ -77,7 +79,7 @@ class Pieces(var id1: Int, var id2: Int, var btn1: ImageButton, var btn2: ImageB
     fun move(){
         setIDs()
         var rule = Rules(updateBoard(), id11, id12, id21, id22)
-        if(board[id1][0] != board[id2][0]){
+        if(board[id1][0] != board[id2][0] && activePlayer != player){
             if(player == 0){
                 if(board[id1] == "lRook"){
                     if(rule.forRook()){
