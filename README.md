@@ -24,7 +24,7 @@ A chess game may allow user to play verses AI
   * Implement depths for AI
   
     
-  ### Cycle 5(no released)
+  ### Cycle 5(not released)
   
   * Build user interface
 
