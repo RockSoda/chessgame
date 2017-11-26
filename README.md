@@ -3,7 +3,7 @@
  Xiaohan Yu
 
 ## Description:
-A chess game may allow user to play with other users
+A chess game may allow user to play verses AI
 
 ## Work Cycle:
 
@@ -17,8 +17,20 @@ A chess game may allow user to play with other users
   
   ### Cycle 3
   
-  * Connect to firebase and achieve multiplayers
+  * Apply AI to the chessboard
+  
+  ### Cycle 4
+  
+  * Implement depths for AI
+  
+    
+  ### Cycle 5(not released)
+  
+  * Build user interface
 
+## References:
+https://medium.freecodecamp.org/simple-chess-ai-step-by-step-1d55a9266977
 
 ## Known issues and bugs:
-Cannot Castling
+
+  ### There is no user interface
