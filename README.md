@@ -6,6 +6,8 @@
 ![poster Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/the%20big%20priest.png)
 
 ## Description:
+This application is wrote by Javascript.It can run in mutiple-platforms, it is a hybrid application.
+The AI part, using minmax-alaphbeta pruning alorithm to do.
 A chess game may allow user to play verses AI
 
 ## Work Cycle:
