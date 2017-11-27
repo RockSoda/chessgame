@@ -2,6 +2,9 @@
 ## Contributors:
  Xiaohan Yu
 
+## Poster:
+![poster Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/big%20priest.png)
+
 ## Description:
 A chess game may allow user to play verses AI
 
