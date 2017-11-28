@@ -29,13 +29,9 @@ A chess game may allow user to play verses AI
   * Implement depths for AI
   
     
-  ### Cycle 5(not released)
+  ### Cycle 5
   
   * Build user interface
 
 ## References:
 https://medium.freecodecamp.org/simple-chess-ai-step-by-step-1d55a9266977
-
-## Known issues and bugs:
-
-  ### There is no user interface
