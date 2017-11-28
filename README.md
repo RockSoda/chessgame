@@ -8,11 +8,9 @@
 ![poster Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/the%20big%20priest.png)
 
 ## Description:
-This application is wrote with Javascript and is a hybrid sofeware that can run in mutiply paltforms i.e. Android, IOS, Windows.
+This application is wrote with Javascript and is a hybrid sofeware that can run in mutiply paltforms i.e. Android, IOS, Windows.Thisgame can also user to play verses AI
 
-Thisgame can also user to play verses AI
-
-  ### About AI
+  ### About AI
   
   It is applied minimax algorithm with alpha-beta pruning. 
   The depth of algorithm is 1, 3 and 5. This application allow the user adjust the difficult of AI.
