@@ -26,8 +26,8 @@ This application is wrote with Javascript and is a hybrid sofeware that can run 
   More information you can see it at https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
   
   or watch a video
+  [alpha beta prunning](https://www.youtube.com/watch?v=d2maa6k2gYE)
   
-  https://www.youtube.com/watch?v=d2maa6k2gYE
 
 ## Work Cycle:
 
