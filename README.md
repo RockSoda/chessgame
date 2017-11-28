@@ -1,6 +1,7 @@
 # Term Project: Chess Game
 ## Contributors:
  Xiaohan Yu
+ 
  Big Priest(honour)
 
 ## Poster:
