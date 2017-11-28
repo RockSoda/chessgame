@@ -1,8 +1,7 @@
 # Term Project: Chess Game
 ## Contributors:
- Big Priest
- 
  Xiaohan Yu
+ Big Priest(honour)
 
 ## Poster:
 ![poster Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/the%20big%20priest.png)
