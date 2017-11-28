@@ -27,11 +27,20 @@ A chess game may allow user to play verses AI
   ### Cycle 4
   
   * Implement depths for AI
-  
     
   ### Cycle 5
   
   * Build user interface
+
+## ScreenShots:
+
+![screenshots Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/Screenshot/h1.jpeg)
+
+![screenshots Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/Screenshot/h2.jpeg)
+
+![screenshots Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/Screenshot/h3.jpeg)
+
+![screenshots Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/Screenshot/h4.jpeg)
 
 ## References:
 https://medium.freecodecamp.org/simple-chess-ai-step-by-step-1d55a9266977
