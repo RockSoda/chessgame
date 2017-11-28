@@ -13,6 +13,7 @@ This application is wrote with Javascript and is a hybrid sofeware that can run 
 Thisgame can also user to play verses AI
 
   ### About AI
+  
   It is applied minimax algorithm with alpha-beta pruning. 
   The depth of algorithm is 1, 3 and 5. This application allow the user adjust the difficult of AI.
   In the game user interface, we can see easy, middle, hard options that represents the different AI (the depth of minmax algorithm)
