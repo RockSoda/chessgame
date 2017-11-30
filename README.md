@@ -65,7 +65,7 @@ A chess game may allow user to play verses AI
 ![screenshots Chess](https://raw.githubusercontent.com/RockSoda/chessgame/master/Screenshot/h4.jpeg)
 
 ## Go To Game:
-https://chessaihost.firebaseapp.com/
+https://chessai-c5b40.firebaseapp.com/
 
 ## References:
 https://medium.freecodecamp.org/simple-chess-ai-step-by-step-1d55a9266977
