@@ -1,15 +1,13 @@
 package com.example.sigh.firstapp
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
-
-import com.google.firebase.auth.FirebaseAuth
-import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_login.*
 import android.content.Intent
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -28,45 +26,43 @@ class LoginActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
     }
 
-    fun LoginToFireBase(email: String, password: String){
+    private fun LoginToFireBase(email: String, password: String) {
 
         mAuth!!.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) {
-                    task ->
+                .addOnCompleteListener(this) { task ->
 
-                    if(task.isSuccessful){
+                    if (task.isSuccessful) {
                         val currentUser = mAuth!!.currentUser
 
-                        Toast.makeText(applicationContext,"Successful Login",Toast.LENGTH_SHORT).show()
-                        if(currentUser != null) {
-                            myRef.child("Users").child(currentUser.email.toString().split("@")[0]).child("Request").setValue(currentUser.uid)
+                        Toast.makeText(applicationContext, "Successful Login", Toast.LENGTH_SHORT).show()
+                        if (currentUser != null) {
+                            myRef.child("Users").child(currentUser.email.toString().split("@")[0]).child("isConnected").setValue(currentUser.uid)
                         }
-
                         loadMain()
-                    }else{
-                        Toast.makeText(this,"Login Failed",Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
 
                     }
 
                 }
     }
 
-    fun btnLoginEvent(view: View){
+    fun btnLoginEvent(view: View) {
 
         LoginToFireBase(editTextUserName.text.toString(), editTextPassword.text.toString())
     }
 
-    fun loadMain(){
-
+    private fun loadMain() {
         val currentUser = mAuth!!.currentUser
 
-        if(currentUser != null){
+        if (currentUser != null) {
             var intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("email",mAuth!!.currentUser!!.email)
-            intent.putExtra("uid",mAuth!!.currentUser!!.uid)
+            intent.putExtra("email", mAuth!!.currentUser!!.email)
+            intent.putExtra("uid", mAuth!!.currentUser!!.uid)
             startActivity(intent)
             finish()
         }
+
 
     }
 }
