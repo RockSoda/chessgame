@@ -78,7 +78,7 @@ open class MainActivity : AppCompatActivity() {
                     override fun onDataChange(dataSnapshot: DataSnapshot?) {
                         try {
                             if(player == 0){
-                                upperN.setText(dataSnapshot!!.value.toString())
+                                upperN.text = dataSnapshot!!.value.toString()
                             }
 
                         } catch (ex: Exception) {
@@ -96,7 +96,7 @@ open class MainActivity : AppCompatActivity() {
                     override fun onDataChange(dataSnapshot: DataSnapshot?) {
                         try {
                             if(player == 1){
-                                upperN.setText(dataSnapshot!!.value.toString())
+                                upperN.text = dataSnapshot!!.value.toString()
 
                             }
 
@@ -257,8 +257,6 @@ open class MainActivity : AppCompatActivity() {
         myRef.child("player"+player.toString()).setValue(nickName)
 
         getNick()
-
-        tv.setText("Current Side: Light")
     }
 
     fun buAcceptEvent(view: View) {
@@ -273,9 +271,6 @@ open class MainActivity : AppCompatActivity() {
 
         myRef.child("BoardAccessibility").setValue("Y")
         getNick()
-
-        tv.setText("Current Side: Light")
-
     }
 
     @SuppressLint("SetTextI18n")
@@ -361,7 +356,7 @@ open class MainActivity : AppCompatActivity() {
     fun userNameOnClick(view: View){
         nickName = userName.text.toString()
         if(!nickName.equals("")){
-            lowerN.setText(nickName)
+            lowerN.text = nickName
             etemail.visibility = View.VISIBLE
             request.visibility = View.VISIBLE
             userName.visibility = View.INVISIBLE
@@ -387,7 +382,7 @@ open class MainActivity : AppCompatActivity() {
 
         override fun onTick(l: Long) {
             c++
-            tvTimer.setText((120-c).toString())
+            tvTimer.text = (120-c).toString()
             when (120 - c) {
                 90 -> Toast.makeText(applicationContext, "90s left! Time waits for no one!", Toast.LENGTH_SHORT).show()
                 60 -> Toast.makeText(applicationContext, "60s left! Time is money friend!", Toast.LENGTH_SHORT).show()
@@ -623,7 +618,11 @@ open class MainActivity : AppCompatActivity() {
                         override fun onDataChange(dataSnapshot: DataSnapshot?) {
                             try {
                                 if (dataSnapshot!!.value.toString().equals("l")) {
-                                    tvWinner.setText("Winner: Light")
+                                    if(player == 0){
+                                        tvWinner.text = "Winner: " + lowerN.text
+                                    }else if(player == 1){
+                                        tvWinner.text = "Winner: " + upperN.text
+                                    }
                                     tvWinner.setTextColor(Color.WHITE)
                                     tvWinner.visibility = View.VISIBLE
                                     restart.visibility = View.VISIBLE
@@ -638,8 +637,12 @@ open class MainActivity : AppCompatActivity() {
                                     tv.visibility = View.INVISIBLE
 
                                     timer.cancel()
-                                } else if (dataSnapshot!!.value.toString().equals("d")) {
-                                    tvWinner.setText("Winner: Dark")
+                                } else if (dataSnapshot.value.toString().equals("d")) {
+                                    if(player == 0){
+                                        tvWinner.text = "Winner: " + upperN.text
+                                    }else if(player == 1){
+                                        tvWinner.text = "Winner: " + lowerN.text
+                                    }
                                     tvWinner.setTextColor(Color.WHITE)
                                     tvWinner.visibility = View.VISIBLE
                                     restart.visibility = View.VISIBLE
@@ -716,8 +719,18 @@ open class MainActivity : AppCompatActivity() {
                                 timer.start()
 
                                 if (previousPlayer == 1) {
-                                    tv.setText("Current Side: Light")
-                                } else tv.setText("Current Side: Dark")
+                                    if(player == 0){
+                                        tv.text = "Current Player: " + lowerN.text
+                                    }else if(player == 1){
+                                        tv.text = "Current Player: " + upperN.text
+                                    }
+                                } else {
+                                    if(player == 0){
+                                        tv.text = "Current Player: " + upperN.text
+                                    }else if(player == 1){
+                                        tv.text = "Current Player: " + lowerN.text
+                                    }
+                                }
 
 
                                 if (previousPlayer != player && player != -1) {
@@ -757,7 +770,7 @@ open class MainActivity : AppCompatActivity() {
                                     upperN.visibility = View.VISIBLE
                                     lowerN.visibility = View.VISIBLE
 
-                                }else if(dataSnapshot!!.value.toString().equals("N")){
+                                }else if(dataSnapshot.value.toString().equals("N")){
                                     Toast.makeText(applicationContext, "Rejected", Toast.LENGTH_SHORT).show()
                                 }
                             } catch (ex: Exception) {
